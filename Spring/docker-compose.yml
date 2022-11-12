@@ -50,9 +50,13 @@ services:
       - .m2:/root/.m2
     stdin_open: true
     tty: true
-
+  angular:
+    image: skanderthabet/angularproject
+    container_name: angular
+    ports:
+      - 4200:80
 volumes:
-  nexus-data: { }
+  nexus-data:
   db:
   sonarqube_data:
   sonarqube_extensions:
